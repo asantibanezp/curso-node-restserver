@@ -1,5 +1,5 @@
 # WebServer + RestServer
 
 
-Recuerde ejecutar ```nom install``` para reconstruir los 
+Recuerde ejecutar ```npm install``` para reconstruir los 
 módulos de node.
