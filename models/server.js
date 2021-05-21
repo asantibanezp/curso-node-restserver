@@ -1,6 +1,7 @@
 
 const express = require('express');
 var cors = require('cors');
+const { dbConnection } = require('../database/config');
 
 class Server {
 
@@ -9,12 +10,21 @@ class Server {
         this.port = process.env.PORT;
         this.usuariosPath = '/api/usuarios';
 
-        this.middlewares(); // Middlewares
+        // Conectar a base de datos
+        this.conectarDB();
 
-        this.routes(); // Esto dispara el método routes, que configura las rutas invocando a this.app y listo
+        // Middlewares 
+        this.middlewares(); 
+
+        // Rutas de mi aplicación
+        this.routes(); 
     }
 
+    async conectarDB() {
+        await dbConnection();
+    }
 
+    // Los middlewares son funciones que se ejecutan antes de llamar a un control, o seguir con la ejecucion de las peticiones
     middlewares() {
 
         // CORS
