@@ -72,13 +72,18 @@ const usuariosDelete = async(req, res = response) => { // Usamos "async" cuando 
 
     const { id } = req.params;
 
+
     // Físicamente lo borramos. No se recomienda borrar usuarios de plano, porque si el usuario tuvo algun tipo de interacción, perderíamos la integridad referencial
     // const usuario = await Usuario.findByIdAndDelete(id);
 
     // Sólo cambiamos el estado, sin borrarlo físicamente
     const usuario = await Usuario.findByIdAndUpdate(id, {estado: false});
+    // const usuarioAutenticado = req.usuario;
 
-    res.json(usuario); // Retornamos el usuario que acaba de ser borrado
+
+    res.json({
+        usuario
+    }); // Retornamos el usuario que acaba de ser borrado
 }
 
 const usuariosPatch = (req, res = response) => {
