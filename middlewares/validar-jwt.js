@@ -47,9 +47,8 @@ const validarJWT = async( req = request, res = response, next ) => {
 
     }
 
-    console.log(token);
-
-    next();
+    // console.log(token);
+    // next(); ESTO ESTABA FALLANDO, ERROR: " Cannot set headers after they are sent to the client" 
 }
 
 
