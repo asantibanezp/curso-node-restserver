@@ -36,7 +36,6 @@ router.post('/', [
     // check('rol', 'No es un rol válido').isIn(['ADMIN_ROLE', 'USER ROLE']),
     check('rol').custom(esRoleValido),
     check('correo').custom(emailExiste),
-
     validarCampos
 ], usuariosPost);
 
