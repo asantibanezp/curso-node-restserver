@@ -16,7 +16,10 @@ class Server {
             categorias: '/api/categorias',
             productos:  '/api/productos',
             buscar:     '/api/buscar',
-            uploads:     '/api/uploads'
+            uploads:    '/api/uploads',
+            noticias:   '/api/noticias',
+            sucursales:   '/api/sucursales',
+            especialidades:   '/api/especialidades'
         }
 
         // Conectar a base de datos
@@ -63,7 +66,9 @@ class Server {
         this.app.use(this.paths.productos, require('../routes/productos'));
         this.app.use(this.paths.buscar, require('../routes/buscar'));
         this.app.use(this.paths.uploads, require('../routes/uploads'));
-
+        this.app.use(this.paths.noticias, require('../routes/noticias'));
+        this.app.use(this.paths.sucursales, require('../routes/sucursales'));
+        this.app.use(this.paths.especialidades, require('../routes/especialidades'));
     }
 
     listen() {

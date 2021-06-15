@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d208e27"],{a761:function(e,t,n){"use strict";n.r(t);var a=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"text-center"},[e._v(" Noticias Page ")])},c=[],i={name:"NoticiasPagina"},s=i,l=n("2877"),u=Object(l["a"])(s,a,c,!1,null,null,null);t["default"]=u.exports}}]);
+//# sourceMappingURL=chunk-2d208e27.7e47e551.js.map
